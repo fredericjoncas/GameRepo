@@ -1,0 +1,11 @@
+C:\Users\Abou\source\repos\Unit\Unit\obj\Debug\Unit.csproj.CoreCompileInputs.cache
+C:\Users\Abou\source\repos\Unit\Unit\bin\Debug\Unit.dll
+C:\Users\Abou\source\repos\Unit\Unit\bin\Debug\Unit.pdb
+C:\Users\Abou\source\repos\Unit\Unit\obj\Debug\Unit.dll
+C:\Users\Abou\source\repos\Unit\Unit\obj\Debug\Unit.pdb
+C:\Users\Abou\source\repos\Game\Unit\bin\Debug\Unit.dll
+C:\Users\Abou\source\repos\Game\Unit\bin\Debug\Unit.pdb
+C:\Users\Abou\source\repos\Game\Unit\obj\Debug\Unit.csprojResolveAssemblyReference.cache
+C:\Users\Abou\source\repos\Game\Unit\obj\Debug\Unit.csproj.CoreCompileInputs.cache
+C:\Users\Abou\source\repos\Game\Unit\obj\Debug\Unit.dll
+C:\Users\Abou\source\repos\Game\Unit\obj\Debug\Unit.pdb

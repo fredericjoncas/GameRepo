@@ -1,0 +1,16 @@
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\UnitTest.deps.json
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\UnitTest.runtimeconfig.json
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\UnitTest.runtimeconfig.dev.json
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\UnitTest.dll
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\UnitTest.pdb
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\Unit.dll
+C:\Users\Abou\source\repos\Game\UnitTest\bin\Debug\netcoreapp2.0\Unit.pdb
+C:\Users\Abou\source\repos\Game\UnitTest\obj\Debug\netcoreapp2.0\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Abou\source\repos\Game\UnitTest\obj\Debug\netcoreapp2.0\UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\Abou\source\repos\Game\UnitTest\obj\Debug\netcoreapp2.0\UnitTest.AssemblyInfoInputs.cache
+C:\Users\Abou\source\repos\Game\UnitTest\obj\Debug\netcoreapp2.0\UnitTest.AssemblyInfo.cs
+C:\Users\Abou\source\repos\Game\UnitTest\obj\Debug\netcoreapp2.0\UnitTest.dll
+C:\Users\Abou\source\repos\Game\UnitTest\obj\Debug\netcoreapp2.0\UnitTest.pdb
