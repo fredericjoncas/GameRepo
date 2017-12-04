@@ -1,64 +1,108 @@
-﻿namespace Unit
+﻿using System;
+
+namespace Unit
 {
     public class Health
     {
         private double currentHealth;
         private double maximumHealth;
-        private double percentageHealth;
-        private const double oneHundred = MagicValues.MagicValues.hundred;
-        private const double one = MagicValues.MagicValues.one;
+        private double percentageHealth;private readonly double minimumHealth;
+        private const double OneHundred = MagicValues.MagicValues.Hundred;
+        private const double One = MagicValues.MagicValues.One;
+        private const double Zero = MagicValues.MagicValues.Zero;
+        private bool isDead;
 
         public Health()
         {
-            maximumHealth = currentHealth = oneHundred;
-            percentageHealth = one;
+            maximumHealth = currentHealth = OneHundred;
+            percentageHealth = One;
+            minimumHealth = Zero;
         }
 
-        public Health(double currentHealth, double maximumHealth, double? percentageHealth=null)
+        public Health(double currentHealth, double maximumHealth, double? percentageHealth=null, double? minimumHealth = null)
         {
             this.maximumHealth = maximumHealth;
+            this.minimumHealth = minimumHealth ?? Zero;
             this.currentHealth = currentHealth;
-            this.percentageHealth = percentageHealth ?? one;
+            this.percentageHealth = percentageHealth ?? One;
         }
 
-        public double getCurrentHealth()
+        public double GetCurrentHealth()
         {
             return currentHealth;
         }
 
-        public double getPercentHealth()
+        public bool GetIsDead()
+        {
+            return isDead;
+        }
+
+        public double GetPercentHealth()
         {
             return percentageHealth;
         }
 
-        public double getMaximumHealth()
+        public double GetMaximumHealth()
         {
             return maximumHealth;
         }
 
-        public void AddCurrentHealth(double health)
+        public double GetMinimumHealth()
         {
-            var futureHealth = currentHealth + health;
-            currentHealth = AddHealth(futureHealth, maximumHealth, currentHealth);
+            return minimumHealth;
         }
 
-        public void AddPercentageHealth(double health)
+        public void AddHealth(double health, bool isPercent)
         {
-            var futureHealth = percentageHealth + health;
-            percentageHealth = AddHealth(futureHealth, one, percentageHealth);
-        }
-
-        private double AddHealth(double futureHealth, double maxHealth, double actualHealth)
-        {
-            if(futureHealth > maxHealth)
+            double myHealth;
+            double maxHealth;
+            if (isPercent)
             {
-                actualHealth = maxHealth;
+                myHealth = percentageHealth;
+                maxHealth = One;
             }
             else
             {
-                actualHealth = futureHealth;
+                myHealth = currentHealth;
+                maxHealth = maximumHealth;
             }
-            return actualHealth;
+            var futureHealth = myHealth + health;
+            AddHealth(futureHealth, maxHealth, isPercent);
+        }
+
+        private void AddHealth(double futureHealth, double maxHealth, bool isPercent)
+        {
+            var newHealth = futureHealth > maxHealth ? maxHealth : futureHealth;
+
+            if (newHealth <= minimumHealth)
+            {
+                isDead = true;
+                currentHealth = minimumHealth;
+                percentageHealth = minimumHealth / maximumHealth;
+                return;
+            }
+
+            if (isPercent)
+            {
+                percentageHealth = newHealth;
+            }
+            else
+            {
+                currentHealth = newHealth;
+            }
+            EqualizeHealth(isPercent);
+        }
+
+        private void EqualizeHealth(bool isPercent)
+        {
+            if (isPercent)
+            {
+                currentHealth = percentageHealth * maximumHealth;
+            }
+            else
+            {
+                percentageHealth = currentHealth / maximumHealth;
+            }
         }
     }
 }
